@@ -1,0 +1,111 @@
+* {
+    font-family: 'Bebas Neue', cursive;
+}
+
+body {
+    align-content: center;
+    width: 1000px;
+    max-width: 1920px;
+}
+
+#header-text {
+    background-color: #F7A7BF;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0px;
+    border: 0px;
+}
+
+/*CSS for Hero Image*/
+.hero-container{
+    margin: 0px;
+    background-image: url(/static/images/hero-image.jpg);
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#hero-text {
+    padding-top: 5px;
+    color: white;
+    font-size: 20px;
+}  
+#hero-list > li {
+    list-style: none;
+    margin: 0 10px;
+    display: block;
+}
+#hero-list {
+    display: flex;
+    justify-content: right;
+  }
+#hero-button {
+    background-color: #51a7ad;
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 2px 2px;
+    border-radius: 12px;
+}
+/*CSS for Tag Line*/
+
+.tag-line-container {
+    background-color: white;
+}
+
+#tag-line-text {
+    padding-top: 5px;
+    color: #51a7ad;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+/*CSS for Footer*/
+.footer-container {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+#footer-text{
+    background-color: #F7A7BF;
+    color: white;
+    font-size: 20px;
+    border: 30px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+}
+
+
+ #footer-list {
+    padding: 0;
+}
+  
+#footer-list > li {
+    list-style: none;
+    margin: 0 10px;
+    display: block;
+}
+  
+#footer-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+  }
+
+
+#instagram-icon {
+    height: 50px;
+    width: 50 px;
+}
