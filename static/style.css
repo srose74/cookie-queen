@@ -82,14 +82,10 @@ h1 {
 }
 
 /*CSS for Grid Gallery on home page*/
-.grid-container {
+.grid-container-3-col {
     display: grid;
     gap: 0px;
     grid-template-columns: auto auto auto;
-}
-.grid-item {
-    font-size: 30px;
-    padding: 0;
 }
 
 #grid-image {
@@ -108,6 +104,29 @@ h1 {
     width: 427px;
     background-color: #F1EDE3;
 }
+/*CSS for Grid Review*/
+.grid-container-2-col {
+    display: grid;
+    gap: 0px;
+    grid-template-columns: auto auto;
+}
+.grid-item-review-image {
+    padding: 0;
+    padding-top: 5px;
+    margin: 0;
+    border: black;
+    height: 300px;
+    width: 427px;
+}
+.grid-item-review-text {
+    padding: 0;
+    padding-top: 5px;
+    margin: 0;
+    border: black;
+    height: 300px;
+    width: 853px;
+}
+
 
 /*CSS for Footer*/
 .footer-container {
