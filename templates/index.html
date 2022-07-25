@@ -8,7 +8,11 @@
                     <li style="align-self: center">Reviews</li>
                     <li style="align-self: center">Contact Us</li>
                     <li style="align-self: center">Our Story</li>
-                    <li><button id="hero-button">Shop Now</button></li>
+                    <li>
+                        <form action="/cookies">
+                            <button id="hero-button" action="/cookies">Shop Now</button>
+                        </form>    
+                    </li>
                 </ul>
             </nav> 
         </div>
@@ -27,7 +31,9 @@
                     <h1 id="tag-line-text">OUR COOKIES</h1>
                     <h1 id="tag-line-text">YOUR WAY</h1>
                     <p id="tag-line-paragraph">Browse through our gallery of custom- made cookies or send us a message to order custom cookies online for any occasion.</p>
-                    <button id="hero-button">Cookie Gallery</button>
+                    <form action="/cookies">
+                        <button id="hero-button">Cookie Gallery</button>
+                    </form>    
                 </div>
             </div>
             <div><img id="grid-image" src="/static/images/grid-image-2.jpg" alt="Picture of Immy's beautiful cookies"></div>
@@ -44,7 +50,8 @@
             </div>
             <div class="grid-item-left-arrow"><img id="arrow-image" src="/static/images/arrow-left.jpg" alt="Click here to move backwards through reviews"></div>
             <div class="grid-item-review-text">
-                <p id="tag-line-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p id="tag-line-text">{{ reviews[0]['tag_line'] }}</p>
+                <p id="tag-line-paragraph-left">{{ reviews[0]['detailed_review'] }}</p>
             </div>
             <div class="grid-item-right-arrow"><img id="arrow-image" src="/static/images/arrow-right.jpg" alt="Click here to move forward through reviews"></div>
         </div>

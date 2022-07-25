@@ -93,6 +93,16 @@ h1 {
     padding-bottom: 30px;
 }
 
+#tag-line-paragraph-left {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    font-size: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+}
+
 /*CSS for Grid Gallery on home page*/
 .grid-container-3-col {
     display: grid;
