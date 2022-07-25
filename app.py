@@ -3,7 +3,7 @@ from flask import Flask, render_template
 import os
 import psycopg2
 
-DATABASE_URL = os.environ.get('DATABASE_URL', 'dbname=cookie_db')
+DATABASE_URL = os.environ.get('DATABASE_URL', 'dbname=cookies_db')
 SECRET_KEY = os.environ.get('SECRET_KEY', 'some-key')
 
 app = Flask(__name__)

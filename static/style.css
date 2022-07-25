@@ -48,6 +48,7 @@ h1 {
     display: flex;
     justify-content: right;
   }
+
 #hero-button {
     background-color: #51a7ad;
     border: none;
@@ -60,6 +61,7 @@ h1 {
     margin: 2px 2px;
     border-radius: 12px;
 }
+
 /*CSS for Tag Line*/
 .tag-line-container {
     background-color: white;    
@@ -72,10 +74,20 @@ h1 {
     text-align: center;
 }
 
+#tag-line-text-left {
+    padding-top: 20px;
+    padding-left: 100px;
+    line-height: 80%;
+    color: #51a7ad;
+    font-size: 24px;
+    text-align: left;
+}
+
 #tag-line-paragraph {
     color: black;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+    font-size: 24px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 30px;
@@ -105,28 +117,56 @@ h1 {
     background-color: #F1EDE3;
 }
 /*CSS for Grid Review*/
-.grid-container-2-col {
+.grid-container-4-col {
     display: grid;
     gap: 0px;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto auto;
 }
 .grid-item-review-image {
     padding: 0;
     padding-top: 5px;
     margin: 0;
-    border: black;
-    height: 300px;
+    height: 250px;
     width: 427px;
 }
+
+.grid-item-left-arrow {
+    padding: 0;
+    padding-top: 50px;
+    margin: 0;
+    height: 250px;
+    width: 100px;
+    color: #51a7ad;
+    font-size: 100px;
+    text-align: center;
+    vertical-align: middle;
+}
+
 .grid-item-review-text {
     padding: 0;
     padding-top: 5px;
     margin: 0;
-    border: black;
-    height: 300px;
-    width: 853px;
+    height: 250px;
+    width: 653px;
+    vertical-align: middle;
 }
 
+.grid-item-right-arrow {
+    padding: 0;
+    padding-top: 50px;
+    margin: 0;
+    height: 250px;
+    width: 100px;
+    color: #51a7ad;
+    font-size: 100px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#arrow-image {
+    height: 50px;
+    width: 50px;
+}
 
 /*CSS for Footer*/
 .footer-container {
