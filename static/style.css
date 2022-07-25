@@ -27,7 +27,7 @@ h1 {
 .hero-container{
     margin: 0px;
     background-image: url(/static/images/hero-image.jpg);
-    height: 400px;
+    height: 800px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -144,7 +144,7 @@ h1 {
     padding: 0;
     padding-top: 5px;
     margin: 0;
-    height: 250px;
+    height: 200px;
     width: 427px;
 }
 
@@ -152,7 +152,7 @@ h1 {
     padding: 0;
     padding-top: 50px;
     margin: 0;
-    height: 250px;
+    height: 200px;
     width: 100px;
     color: #51a7ad;
     font-size: 100px;
@@ -164,7 +164,7 @@ h1 {
     padding: 0;
     padding-top: 5px;
     margin: 0;
-    height: 250px;
+    height: 200px;
     width: 653px;
     vertical-align: middle;
 }
@@ -184,6 +184,29 @@ h1 {
 #arrow-image {
     height: 50px;
     width: 50px;
+}
+
+/*CSS for My Story*/
+.grid-container-2-col {
+    display: grid;
+    gap: 0px;
+    grid-template-columns: auto auto;
+}
+
+#grid-image-immy {
+    padding: 0;
+    padding-top: 5px;
+    margin: 0;
+    height: 640px;
+    width: 640px;
+}
+.grid-item-mystory-text {
+    padding: 0;
+    padding-top: 5px;
+    margin: 0;
+    height: 640px;
+    width: 640px;
+    background-color: #F1EDE3;
 }
 
 /*CSS for Footer*/
