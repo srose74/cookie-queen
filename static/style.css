@@ -36,8 +36,8 @@ h1 {
 
 #hero-text {
     padding-top: 5px;
-    color: white;
-    font-size: 20px;
+    color: #1483bf;
+    font-size: 24px;
 }  
 #hero-list > li {
     list-style: none;
@@ -50,7 +50,7 @@ h1 {
   }
 
 #hero-button {
-    background-color: #51a7ad;
+    background-color: #1483bf;
     border: none;
     color: white;
     padding: 15px;
@@ -69,7 +69,7 @@ h1 {
 
 #tag-line-text {
     padding-top: 5px;
-    color: #51a7ad;
+    color: #1483bf;
     font-size: 24px;
     text-align: center;
 }
@@ -78,7 +78,7 @@ h1 {
     padding-top: 20px;
     padding-left: 100px;
     line-height: 80%;
-    color: #51a7ad;
+    color: #1483bf;
     font-size: 24px;
     text-align: left;
 }
@@ -154,7 +154,7 @@ h1 {
     margin: 0;
     height: 200px;
     width: 100px;
-    color: #51a7ad;
+    color: #1483bf;
     font-size: 100px;
     text-align: center;
     vertical-align: middle;
@@ -175,7 +175,7 @@ h1 {
     margin: 0;
     height: 250px;
     width: 100px;
-    color: #51a7ad;
+    color: #1483bf;
     font-size: 100px;
     text-align: center;
     vertical-align: middle;
