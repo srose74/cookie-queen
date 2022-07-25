@@ -14,7 +14,18 @@ def all_reviews(database_url):
         }
         review_list.append(review)
     return review_list
-
-
-
+    
+def all_cookies(database_url):
+    results = sql_select(database_url, "SELECT * FROM cookies;")
+    cookies_list = []
+    for row in results:
+        cookies = {
+            'id': row[0],
+            'name': row[1],
+            'image_URL': row[2],
+            'price': f'{(row[3]/100):.2f}',
+            'category': row[4]
+        }
+        cookies_list.append(cookies)
+    return cookies_list
 

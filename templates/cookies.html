@@ -1,4 +1,10 @@
+
 {% extends "base.html" %}
-<h1>Hello World</h1>
+    
 {% block main %}
+    {% for cookie in cookies_list %}
+        <h1>{{ cookie['name'] }}</h1>
+        <img height="200px" width="200px" src="{{ cookie['image_URL'] }}" alt="{{ cookie['name'] }}">
+    {% endfor %}
+
 {% endblock %}

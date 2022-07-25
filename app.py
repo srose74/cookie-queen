@@ -1,7 +1,7 @@
 from distutils.log import debug
 from http import cookies
 from flask import Flask, render_template
-from models.data_controller import all_reviews
+from models.data_controller import all_cookies, all_reviews
 
 import os
 import psycopg2
@@ -20,7 +20,8 @@ def index():
 
 @app.route('/cookies')
 def display_cookies():
-    return render_template ("cookies.html")
+    cookies = all_cookies(DATABASE_URL)
+    return render_template ("cookies.html", cookies_list=cookies)
 
 if __name__ == "__main__":
     app.run(debug=True)
