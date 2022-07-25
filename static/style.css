@@ -103,7 +103,7 @@ h1 {
     padding-bottom: 30px;
 }
 
-/*CSS for Grid Gallery on home page*/
+/*CSS for Grid Gallery on home page and cookie page*/
 .grid-container-3-col {
     display: grid;
     gap: 0px;
@@ -116,6 +116,14 @@ h1 {
     margin: 0;
     height: 427px;
     width: 427px;
+}
+
+#grid-image-cookie {
+    padding: 0;
+    padding-top: 30px;
+    margin: 0;
+    height: 200px;
+    width: 200px;
 }
 
 .grid-item-center {

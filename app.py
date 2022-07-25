@@ -12,7 +12,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'some-key')
 app = Flask(__name__)
 app.secret_key = SECRET_KEY.encode()
 
-
 @app.route('/')
 def index():
     reviews = all_reviews(DATABASE_URL)
@@ -22,6 +21,10 @@ def index():
 def display_cookies():
     cookies = all_cookies(DATABASE_URL)
     return render_template ("cookies.html", cookies_list=cookies)
+
+@app.route('/orders')
+def order():
+    return render_template("orders.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

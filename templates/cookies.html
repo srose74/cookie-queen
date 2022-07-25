@@ -2,9 +2,28 @@
 {% extends "base.html" %}
     
 {% block main %}
-    {% for cookie in cookies_list %}
-        <h1>{{ cookie['name'] }}</h1>
-        <img height="200px" width="200px" src="{{ cookie['image_URL'] }}" alt="{{ cookie['name'] }}">
-    {% endfor %}
-
+    <section class="cookie-page-header">
+        <div id="tag-line-text">
+            <h1>COOKIE QUEEN's GALLERY</h1>
+            <p id="tag-line-paragraph-left">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec erat tempus, tempor orci at, semper sem. 
+                Morbi semper mauris vel felis faucibus accumsan. Vivamus euismod dui ante, in commodo risus bibendum ac. Ut 
+                sodales bibendum dolor, et vestibulum nulla maximus eu. Curabitur vitae tellus mollis ante vulputate consequat. 
+            </p>
+        </div>
+    </section>
+    <section class="grid-cookie-container">
+        <div class="grid-container-3-col">
+            {% for cookie in cookies_list %}
+                <div id="tag-line-text">
+                    <img id="grid-image-cookie" src="{{ cookie['image_URL'] }}" alt="{{ cookie['name'] }}">
+                    <h1>{{ cookie['name'] }}</h1>
+                    <p id="tag-line-paragraph"> Price: ${{ cookie['price'] }} per cookie</p>
+                    <form action="/orders">
+                        <button id="hero-button">Order now</button>
+                    </form> 
+                </div>    
+            {% endfor %}
+        </div>
+    </section>    
 {% endblock %}
