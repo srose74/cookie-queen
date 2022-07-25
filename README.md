@@ -32,7 +32,9 @@ Homepage
 - Reviews
 
 Cookies page
-- 
+- Shows the cookie range
+- Allows users to filter by category
+- Click through to order page
 
 
 Order page
