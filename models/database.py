@@ -9,6 +9,12 @@ def sql_select(database_url, query):
     connection.close()
     return results
 
-
+def sql_write(database_url, query):
+    connection = psycopg2.connect(database_url)
+    cursor = connection.cursor()
+    cursor.execute(query)
+    connection.commit()
+    connection.close()
+  
 
 

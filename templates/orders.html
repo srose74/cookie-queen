@@ -1,5 +1,40 @@
 {% extends "base.html" %}
     
 {% block main %}
-<h1>Hello World</h1>
+<section class="order-page-header">
+    <div id="tag-line-text">
+        <h1>ORDER YOUR COOKIES NOW</h1>
+        <p id="tag-line-paragraph-left">
+            All of our orders are freshly baked to order.  Cookies can be ordered from our large collection as show in our <a href="http://127.0.0.1:5000/">Cookie Gallery</a>. 
+            Or contact us to discuss your unique requirements and we can prepare options that will compliment any celebration and party theme. 
+        </p>
+        <p id="tag-line-paragraph-left">
+            Submit your order here and one of our friendly team will be in touch within 1 business day to discuss shipping and payment details.     
+        </p>  
+    </div>
+</section>
+<section class="order-form">
+    <div id="tag-line-text-left">
+        <form action="/order_action" method="POST">
+            <h1>Your details:</h1>
+            <p id="tag-line-paragraph-left">
+                Name: <input type="text" name="name"><br>
+                Email: <input type="text" name="email"><br>
+                Mobile: <input type="number" name="mobile"><br>
+            </p>
+
+            <h1>Order Item:</h1>
+            <p id="tag-line-paragraph-left">
+                <span>Cookie Name:</span> {{ cookie_name }}<br>
+                <img id="grid-image-cookie" src="{{ cookie_url }}" alt="{{ cookie_name }}"><br><br>  
+                <span>Price:</span> ${{ cookie_price }} per cookie<br><br>       
+                Quantity: <input type="number" name="quantity"><br>
+            </p>
+            <button id="hero-button">Add to order</button>
+        </form>
+    </div>    
+</section>
+ 
+
+
 {% endblock %}

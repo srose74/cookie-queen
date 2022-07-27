@@ -5,10 +5,28 @@
 body {
     align-content: center;
     width: 1280px;
+    margin-left: 150px;
     max-width: 1920px;
 }
+
 h1 {
     letter-spacing: 4px;
+}
+
+a {
+    color: #1483bf;
+    letter-spacing: 3px;
+}
+
+span {
+    color: #1483bf;
+}
+
+.white-background {
+    background-color: white;
+}
+.section-break {
+     margin-top: -10px;
 }
 
 #header-text {
@@ -88,6 +106,7 @@ h1 {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-size: 24px;
+    padding-top: 5px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 30px;
@@ -103,7 +122,7 @@ h1 {
     padding-bottom: 30px;
 }
 
-/*CSS for Grid Gallery on home page and cookie page*/
+/*CSS for Grid Gallery on home page, additional information and cookie page*/
 .grid-container-3-col {
     display: grid;
     gap: 0px;
@@ -133,6 +152,15 @@ h1 {
     height: 427px;
     width: 427px;
     background-color: #F1EDE3;
+}
+
+.grid-item-additional-info {
+    padding: 5;
+    padding-top: 5px;
+    margin: 0;
+    height: 250px;
+    width: 427px;
+    background-color: #dcd2d8;
 }
 /*CSS for Grid Review*/
 .grid-container-4-col {
@@ -196,7 +224,6 @@ h1 {
 #grid-image-immy {
     padding: 0;
     padding-top: 5px;
-    margin: 0;
     height: 640px;
     width: 640px;
 }
