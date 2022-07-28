@@ -1,4 +1,4 @@
-from models.database import sql_select
+from models.database import sql_select, sql_write, sql_select_params
 
 def all_reviews(database_url):
     results = sql_select(database_url, "SELECT * FROM reviews;")
@@ -29,3 +29,19 @@ def all_cookies(database_url):
         cookies_list.append(cookies)
     return cookies_list
 
+def commit_order_item(database_url, order_item):
+
+    #1. Check if customer exists, if no create new customer record, if yes find customer id
+    customer_info = sql_select_params(database_url, "SELECT * FROM customers WHERE email = %s", [order_item['customer_email']])
+    if customer_info:
+        customer_id = customer_info[0][0]
+        print(customer_id)
+    else:
+        print("Customer does not exist")
+        sql_write(database_url, "INSERT INTO customers (name, email, mobile) VALUES (%s, %s, %s)", (order_item['customer_name'], order_item['customer_email'], order_item['customer_mobile']))
+
+    #2. Check if custoer has a pending order, if no create new order, if yes find order id
+    #3. Commit order to order items.
+
+
+  

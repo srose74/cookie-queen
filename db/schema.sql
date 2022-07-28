@@ -39,7 +39,9 @@ CREATE TABLE reviews (
 CREATE TABLE orders (
     id SERIAL PRIMARY KEY,
     customer_id INTEGER REFERENCES customers(id),
-    order_total INTEGER NOT NULL
+    order_total INTEGER NOT NULL,
+    order_status TEXT NOT NULL,
+    CHECK (order_status in ('PENDING', 'SUBMITTED', 'FULLFILLED'))
 );
 
 CREATE TABLE order_items (

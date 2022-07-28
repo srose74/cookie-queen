@@ -30,6 +30,10 @@
                 <span>Price:</span> ${{ cookie_price }} per cookie<br><br>       
                 Quantity: <input type="number" name="quantity"><br>
             </p>
+            <input type="hidden" name="id" value="{{ cookie_id }}">
+            <input type="hidden" name="cookie_name" value="{{ cookie_name }}">
+            <input type="hidden" name="price" value="{{ cookie_price }}">
+            <input type="hidden" name="url" value="{{ cookie_url }}">
             <button id="hero-button">Add to order</button>
         </form>
     </div>    
