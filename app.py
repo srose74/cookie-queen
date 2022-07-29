@@ -1,7 +1,7 @@
 from distutils.log import debug
 from http import cookies
 from flask import Flask, render_template, request
-from models.data_controller import all_cookies, all_reviews, review_order, commit_order_item
+from models.data_controller import all_cookies, all_reviews, commit_order_item, display_order_details, display_order_items
 
 import os
 import psycopg2
@@ -54,9 +54,13 @@ def add_order_item():
     }
 
     order_details = commit_order_item(DATABASE_URL, order_item)
-    review_order(DATABASE_URL, order_details)
+    customer_id = order_details[0]
+    order_id = order_details[1]
 
-    return render_template("order-review.html", order_item=order_item)
+    order_details = display_order_details(DATABASE_URL, customer_id, order_id)
+    order_items = display_order_items (DATABASE_URL, order_id)
+
+    return render_template("order-review.html", order_details=order_details, order_items=order_items)
 
 if __name__ == "__main__":
     app.run(debug=True)

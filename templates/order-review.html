@@ -4,9 +4,39 @@
 <section class="order-review-page-header">
     <div id="tag-line-text">
         <h1>ORDER REVIEW</h1>
-        <p>{{ order_item }}</p>
+        <p id="tag-line-paragraph-left">
+            Thank you for submitting your order {{ order_details[0][1] }}. 
+            Please carefully review your order below and update accordingly. 
+        </p>
+        <p id="tag-line-paragraph-left">
+            Order ID:&nbsp;&nbsp;{{ order_details[0][0] }}<br>
+            Email:&nbsp;&nbsp;{{ order_details[0][2] }}<br>
+            Mobile:&nbsp;&nbsp;{{ order_details[0][3] }}
+        </p>
+        <button id="hero-button">Update your details</button>
+    </div>
+</section>    
+<section class="grid-cookie-container">
+    <div class="grid-container-3-col">
+        {% for item in order_items %}
+            <div id="tag-line-text">
+                <img id="grid-image-cookie" src="{{ item['image_URL'] }}" alt="{{ item['cookie_name'] }}">
+                <h1>{{ item['cookie_name'] }}</h1>
+                <p id="tag-line-paragraph"> 
+                    Price: ${{ item['price'] }} per item
+                    Quantity: {{ item['quantity'] }}
+                    Total: ${{ item['total_price'] }}
+                </p>
+                <button id="hero-button">Remove Order Item</button>     
+            </div>    
+        {% endfor %}
     </div>
 </section>
-
-
+<section class="order-review-page-footer">
+    <div id="tag-line-text">
+        <h1>ORDER TOTAL</h1>
+        <p>Order Total:&nbsp;&nbsp; ${{ order_details[1][0]/100 }}</p>
+        <button id="hero-button">Complete Order</button> 
+    </div>
+</section>
 {% endblock %}
