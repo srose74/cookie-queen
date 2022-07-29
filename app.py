@@ -1,10 +1,12 @@
 from distutils.log import debug
 from http import cookies
-from flask import Flask, render_template, request
-from models.data_controller import all_cookies, all_reviews, commit_order_item, display_order_details, display_order_items
+from flask import Flask, render_template, request, redirect, session
+from models.data_controller import all_cookies, all_reviews, commit_order_item, display_order_details, display_order_items, get_user_details
 
 import os
-import psycopg2
+import bcrypt
+
+from models.database import sql_select_params
 
 DATABASE_URL = os.environ.get('DATABASE_URL', 'dbname=cookies_db')
 SECRET_KEY = os.environ.get('SECRET_KEY', 'some-key')
@@ -61,6 +63,50 @@ def add_order_item():
     order_items = display_order_items (DATABASE_URL, order_id)
 
     return render_template("order-review.html", order_details=order_details, order_items=order_items)
+
+@app.route('/signup', methods=['POST', 'GET'])
+def sign_up():
+    return render_template("sign_up.html")
+
+@app.route('/signup_action', methods=['POST'])
+def signup_action():
+    name = request.form.get('name')
+    email = request.form.get('email')
+    password = request.form.get('password')
+    
+    password_hash = bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()
+    print(name)
+    print(email)
+    print(password_hash)
+
+    return redirect('/')
+
+@app.route('/login', methods=['POST', 'GET'])
+def login():
+    return render_template("login.html")
+
+@app.route('/login_action', methods=['POST'])
+def login_action():
+    email = request.form.get('email')
+    password = request.form.get('password')
+
+    user_details = get_user_details(DATABASE_URL, email)
+
+    if user_details:
+        print("user exists")
+        valid = bcrypt.checkpw(password.encode(), user_details['user_password'].encode())
+        print(valid)
+        if valid:
+            session['user_email'] = user_details['user_email']
+            session['username'] = user_details['user_name']
+            session['user_id'] = user_details['user_id']
+            session['password_hash'] = user_details['user_password']
+            return redirect('/')
+    else:
+        print("user does not exist")
+        return redirect('/login')
+    
+    
 
 if __name__ == "__main__":
     app.run(debug=True)

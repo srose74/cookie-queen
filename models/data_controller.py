@@ -55,6 +55,21 @@ def get_order_status(database_url, customer_id):
     else:
         return order_info
 
+def get_user_details(database_url, email):
+    user_info = sql_select_params(database_url, "SELECT * FROM users WHERE email = %s", [email])
+    
+    if user_info:
+        user_details = {
+            'user_id': user_info[0][0],
+            'user_name': user_info[0][1],
+            'user_email': user_info[0][2],
+            'user_password': user_info[0][3]
+        }
+        return user_details
+    else:
+        return user_info
+
+
 def display_order_details(database_url, customer_id, order_id):    
     customer_details = sql_select_params(database_url,"SELECT * FROM customers WHERE id=%s", [customer_id])
     order_total = sql_select_params(database_url, "SELECT order_total FROM orders WHERE id = %s", [order_id])

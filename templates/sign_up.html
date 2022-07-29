@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+    
+{% block main %}
+<section class="login">
+    <div id="tag-line-text">
+        <h1>Create Account</h1>
+            <form action="/signup_action" method="POST">
+                <p id="tag-line-paragraph-left">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" />
+                </p>
+                <p id="tag-line-paragraph-left">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" />
+                </p>
+                <p id="tag-line-paragraph-left">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" />
+                </p>
+                <button id="hero-button">Sign-up</button>
+            </form>
+</section>
+{% endblock %}
