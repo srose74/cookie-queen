@@ -58,6 +58,7 @@ Project Link: [https://dry-ridge-61085.herokuapp.com/]
 4. Delete an order item
 5. Order Finalisation
 6. Submit a Review
+7. Contact Us Page
 
 Administration
 

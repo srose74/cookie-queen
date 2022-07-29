@@ -5,9 +5,9 @@
         <div id="hero-text">
             <nav id="hero-nav">
                 <ul id="hero-list">
-                    <li style="align-self: center">Reviews</li>
+                    <li style="align-self: center"><a href="#myreviews">Reviews</a></li>
                     <li style="align-self: center">Contact Us</li>
-                    <li style="align-self: center">Our Story</li>
+                    <li style="align-self: center"><a href="#mystory">My Story</a></li>
                     <li>
                         <form action="/cookies">
                             <button id="hero-button" action="/cookies">Shop Now</button>
@@ -41,6 +41,7 @@
     </section>
     <section class="white-background">
         <div class="grid-container-4-col">
+            <a id="myreviews">
             <div class="grid-item-review-image">
                 <div id="tag-line-text-left">
                     <h1>HEAR</h1>
@@ -48,12 +49,18 @@
                     <h1>CUSTOMERS</h1>
                 </div>
             </div>
-            <div class="grid-item-left-arrow"><img id="arrow-image" src="/static/images/arrow-left.jpg" alt="Click here to move backwards through reviews"></div>
-            <div class="grid-item-review-text">
-                <p id="tag-line-text">{{ reviews[0]['tag_line'] }}</p>
-                <p id="tag-line-paragraph-left">{{ reviews[0]['detailed_review'] }}</p>
+            </a>
+            <div class="grid-item-left-arrow">
+                <img id="arrow-image" src="/static/images/arrow-left.jpg" alt="Click here to move backwards through reviews">
             </div>
-            <div class="grid-item-right-arrow"><img id="arrow-image" src="/static/images/arrow-right.jpg" alt="Click here to move forward through reviews"></div>
+            <div class="grid-item-review-text">
+                <p id="tag-line-text">{{ reviews[1]['tag_line'] }}</p>
+                <p id="tag-line-paragraph-left">{{ reviews[1]['detailed_review'] }}</p>
+                <p id="review-rating-right">{{ reviews[1]['rating'] }}&nbsp;&nbsp;Stars</p>
+            </div>
+            <div class="grid-item-right-arrow">
+                <img id="arrow-image" src="/static/images/arrow-right.jpg" alt="Click here to move forward through reviews">
+            </div>
         </div>
     </section>
     <section class="section-break">
@@ -63,16 +70,18 @@
             </div>
             <div class="grid-item-mystory-text">
                 <div id="tag-line-text">
-                    <h1>MY STORY</h1>
-                    <p id="tag-line-paragraph">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec erat tempus, tempor orci at, semper sem. 
-                        Morbi semper mauris vel felis faucibus accumsan. Vivamus euismod dui ante, in commodo risus bibendum ac. Ut 
-                        sodales bibendum dolor, et vestibulum nulla maximus eu. Curabitur vitae tellus mollis ante vulputate consequat.
-
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec erat tempus, tempor orci at, semper sem. 
-                        Morbi semper mauris vel felis faucibus accumsan. Vivamus euismod dui ante, in commodo risus bibendum ac. Ut 
-                        sodales bibendum dolor, et vestibulum nulla maximus eu. Curabitur vitae tellus mollis ante vulputate consequat.
-                    </p>
+                    <a id="mystory">
+                        <h1>MY STORY</h1>
+                        <p id="tag-line-paragraph">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec erat tempus, tempor orci at, semper sem. 
+                            Morbi semper mauris vel felis faucibus accumsan. Vivamus euismod dui ante, in commodo risus bibendum ac. Ut 
+                            sodales bibendum dolor, et vestibulum nulla maximus eu. 
+                        </p>
+                        <p id="tag-line-paragraph">
+                            Vivamus euismod dui ante, in commodo risus bibendum ac. Utsodales bibendum dolor.
+                        </p>
+                        <p id="immy-tag-signature">Immy</p>
+                    </a>
             </div>
         </div>
     </section>
@@ -80,16 +89,19 @@
         <div class="grid-container-3-col">
             <div class="grid-item-additional-info">
                 <p id="tag-line-paragraph">
+                    <img height="100px" src="/static/images/calendar-icon.png"><br>
                     Same day delivery & free shipping for orders over $100
                 </p>
             </div>
             <div class="grid-item-additional-info">
                 <p id="tag-line-paragraph">
+                    <img height="100px" src="/static/images/calendar-icon.png"><br>
                     All of our cookies are freshly baked to order
                 </p>
             </div>
             <div class="grid-item-additional-info">
                 <p id="tag-line-paragraph">
+                    <img height="100px" src="/static/images/calendar-icon.png"><br>
                     Perfect for weddings, baby showers, corporate events
                 </p>
             </div>

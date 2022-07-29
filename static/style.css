@@ -15,7 +15,8 @@ h1 {
 
 a {
     color: #1483bf;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
+    text-decoration: none;
 }
 
 span {
@@ -120,6 +121,15 @@ span {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 30px;
+}
+
+#review-rating-right {
+    color: #F7A7BF;
+    font-family: 'Dancing Script', cursive;
+    font-size: 34px;
+    font-weight: bolder;
+    text-align: right;
+    margin-right: 100px;
 }
 
 /*CSS for Grid Gallery on home page, additional information and cookie page*/
@@ -236,6 +246,16 @@ span {
     background-color: #F1EDE3;
 }
 
+#immy-tag-signature {
+    color: #F7A7BF;
+    font-family: 'Dancing Script', cursive;
+    font-size: 55px;
+    font-weight: bolder;
+    text-align: right;
+    margin-right: 100px;
+}
+
+
 /*CSS for Footer*/
 .footer-container {
     margin: auto;
@@ -269,8 +289,16 @@ span {
     align-items: right;
   }
 
+#copyright {
+    font-style: bold;
+}
 
 #instagram-icon {
     height: 50px;
     width: 50 px;
+}
+
+#logo-icon {
+    height: 60px;
+    width: 60px;
 }
